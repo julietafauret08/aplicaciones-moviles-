@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GraficoTareas from "../../components/GaficoTarea";
 
 const TABS = [
     { id: "all", label: "Todas", Icon: IconList },
@@ -125,7 +126,7 @@ function HomeScreen() {
                 />
                 <button type="submit">Añadir</button>
             </form>
-
+<GraficoTareas tareas={tasks} />
             <ul className="todo-list">
                 {filteredTasks.length === 0 ? (
                     <li className="todo-empty" style={{ color: "white", opacity: 0.8 }}>
